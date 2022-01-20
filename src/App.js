@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { GameProvider } from "./context/game.context";
+import Game from "./components/Game";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Container from "./styles/AppStyles";
+import MenuPage from "./components/MenuPage";
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GameProvider>
+        <TransitionGroup component={null}>
+          <CSSTransition
+            key={location.key}
+            timeout={300}
+            classNames="pageSlider"
+            mountOnEnter={false}
+            unmountOnExit={true}
+          >
+            <Routes key={location}>
+              <Route path="/" element={<MenuPage />} />
+              <Route exact path="/Game" element={<Game />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </GameProvider>
+    </Container>
   );
 }
 
