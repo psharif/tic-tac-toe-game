@@ -28,6 +28,16 @@ const GameStatRow = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* Large devices (desktops, less than 1200px) Tablet Screens */
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 150px; 
+      height: 80px; 
+    }
+    /* Small Devices Cell Phone Screens */
+    @media screen and (max-width: 767px) {
+      width: 110px; 
+      height: 80px; 
+    }
   }
   .x-stats {
     background-color: #31c3bd;

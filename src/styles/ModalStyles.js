@@ -32,12 +32,20 @@ const GameModal = styled.div`
             font-weight: 700;
             margin-bottom: 10px;
             margin-top: 0px;
+            /* Small Devices Cell Phone Screens */
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
         }
         .main-text {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 800px;
+            /* Small Devices Cell Phone Screens */
+            @media screen and (max-width: 767px) {
+                width: 400px;
+            }
             .mask-o,
             .mask-x {
                 display: block;
@@ -47,6 +55,12 @@ const GameModal = styled.div`
                 mask-size: 70px 70px;
                 mask-repeat: no-repeat;
                 mask-position: center;
+                /* Small Devices Cell Phone Screens */
+                @media screen and (max-width: 767px) {
+                    width: 40px;
+                    height: 40px;
+                    mask-size: 30px 30px;
+                }
             }
             .mask-o {
                 background-color: #f2b137;
@@ -68,6 +82,11 @@ const GameModal = styled.div`
                 }};
                 margin-top: 20px;
                 letter-spacing: 2px;
+                /* Small Devices Cell Phone Screens */
+                @media screen and (max-width: 767px) {
+                    margin-left: 10px;
+                    font-size: 28px;
+                }
             }
         }
         .button-row {
@@ -81,6 +100,11 @@ const GameModal = styled.div`
                 font-weight: 700;
                 font-size: 18px;
                 margin: 0px 10px;
+                /* Small Devices Cell Phone Screens */
+                @media screen and (max-width: 767px) {
+                    padding: 10px 25px;
+                    font-size: 16px;
+                }
             }
             .grey-btn {
                 background-color: #a8bfc9;

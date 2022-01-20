@@ -12,6 +12,14 @@ const GameMenu = styled.div`
     width: 35%;
     flex-direction: column;
     align-items: center;
+    /* Large devices (desktops, less than 1200px) Tablet Screens */
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 60%; 
+    }
+    /* Large devices (desktops, less than 1200px) Tablet Screens */
+    @media screen and (max-width: 767px) {
+      width: 90%; 
+    }
     .icon-row {
       display: flex;
       margin-bottom: 50px;
@@ -39,6 +47,10 @@ const GameMenu = styled.div`
         font-size: 26px;
         letter-spacing: 1px;
         margin-bottom: 30px;
+        /* Large devices (desktops, less than 1200px) Tablet Screens */
+        @media screen and (max-width: 767px) {
+          font-size: 20px;
+        }
       }
       p {
         font-size: 20px;
@@ -46,6 +58,10 @@ const GameMenu = styled.div`
         color: rgba(168, 191, 201, 0.5);
         text-transform: uppercase;
         letter-spacing: 0.8px;
+        /* Large devices (desktops, less than 1200px) Tablet Screens */
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
       }
       .button-row {
         display: flex;
@@ -69,6 +85,10 @@ const GameMenu = styled.div`
       border: none;
       padding: 20px 0px;
       margin-bottom: 40px;
+      /* Large devices (desktops, less than 1200px) Tablet Screens */
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
     }
     .cpu-new-btn {
       background-color: #f2b137;
@@ -94,9 +114,23 @@ const MarkButton = styled.button`
           width: 100%;
           display: flex;
           justify-content: center;
+          /* Large devices (desktops, less than 1200px) Tablet Screens */
+          @media screen and (max-width: 767px) {
+            padding: 10px 0px;
+          }
           .mask {
             width: 60px;
             height: 60px;
+            /* Large devices (desktops, less than 1200px) Tablet Screens */
+            @media screen and (max-width: 767px) {
+              width: 50px;
+              height: 50px;
+            }
+            /* Small Devices Cell Phone Screens */
+            @media screen and (max-width: 767px) {
+              width: 50px;
+              height: 50px;
+            }
             background-color: #1a2a33;
             -webkit-mask-image: ${(props) =>
               props.mark === "x"
