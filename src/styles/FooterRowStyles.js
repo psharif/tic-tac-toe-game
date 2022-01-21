@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+/* Most Style Sheets will have seperate files. This is just a comment FYI.*/
 const GameStatRow = styled.div`
   display: flex;
   flex-direction: row;
